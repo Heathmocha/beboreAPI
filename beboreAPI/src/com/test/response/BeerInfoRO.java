@@ -3,27 +3,9 @@ package com.test.response;
 public class BeerInfoRO
 {
 
-    private int beerId;
     private String breweryName;
     private String beerName;
     private String beerStyle;
-
-    /**
-     * @return the beerId
-     */
-    public int getBeerId()
-    {
-        return beerId;
-    }
-
-    /**
-     * @param beerId
-     *            the beerId to set
-     */
-    public void setBeerId(int beerId)
-    {
-        this.beerId = beerId;
-    }
 
     /**
      * @return the breweryName

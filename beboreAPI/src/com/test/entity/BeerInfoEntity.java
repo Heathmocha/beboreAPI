@@ -13,7 +13,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "beerInfo")
-@NamedQuery(name = "BeerInfo.findAll", query = "SELECT b FROM BeerInfo b")
+@NamedQuery(name = "BeerInfo.findAll", query = "SELECT b FROM BeerInfoEntity b")
 public class BeerInfoEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;

@@ -18,7 +18,7 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "beerLog")
 @IdClass(BeerLogEntityKey.class)
-@NamedQuery(name = "BeerLog.findAll", query = "SELECT b FROM BeerLog b")
+@NamedQuery(name = "BeerLog.findAll", query = "SELECT b FROM BeerLogEntity b")
 public class BeerLogEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;

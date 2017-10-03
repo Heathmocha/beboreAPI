@@ -26,4 +26,9 @@ public class TestBaseDAO
         this.entityManager = entityManager;
     }
 
+    protected TestBaseDAO()
+    {
+        super();
+    }
+    
 }
