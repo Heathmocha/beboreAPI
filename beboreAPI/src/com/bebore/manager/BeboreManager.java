@@ -13,39 +13,43 @@ public class BeboreManager
 {
 
     @Inject
-    BeboreDAO testDAO;
+    BeboreDAO beboreDAO;
 
     @Inject
     BeerListMapper beerListMapper;
 
     public List<BeerInfoRO> getBeerList()
     {
-        System.out.println("HM - inside the manager method getBeerList");
 
         List<BeerEntity> beerList;
-        beerList = getTestDAO().getBeerList();
+        beerList = getBeboreDAO().getBeerList();
 
         return beerListMapper.mapBeers(beerList);
     }
 
     public BeerInfoRO getSpecificBeer(int id)
     {
-        BeerEntity specificBeer= new BeerEntity();
+        BeerEntity specificBeer = new BeerEntity();
 
-        specificBeer = getTestDAO().getBeerById(id);
+        specificBeer = getBeboreDAO().getBeerById(id);
 
         return beerListMapper.mapBeer(specificBeer);
 
     }
 
-    public BeboreDAO getTestDAO()
+    public void getReviewList()
     {
-        return testDAO;
+        System.out.println("HM - inside the method getReviewList");
     }
 
-    public void setTestDAO(BeboreDAO testDAO)
+    public BeboreDAO getBeboreDAO()
     {
-        this.testDAO = testDAO;
+        return beboreDAO;
+    }
+
+    public void setBeboreDAO(BeboreDAO beboreDAO)
+    {
+        this.beboreDAO = beboreDAO;
     }
 
 }

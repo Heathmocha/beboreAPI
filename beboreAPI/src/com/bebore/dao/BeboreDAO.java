@@ -16,15 +16,15 @@ public class BeboreDAO extends BeboreBaseDAO
 
             beerList = getEntityManager().createNamedQuery("getAllBeerCollection", BeerEntity.class).getResultList();
 
-//            if (!beerList.isEmpty())
-//            {
-//                for (BeerEntity singleBeer : beerList)
-//                {
-//                    System.out.println("HM - beer name = " + singleBeer.getName());
-//                    System.out.println("HM - brewery name = " + singleBeer.getBrewery().getName());
-//                    System.out.println("HM - style = " + singleBeer.getStyle().getName());
-//                }
-//            }
+            // if (!beerList.isEmpty())
+            // {
+            // for (BeerEntity singleBeer : beerList)
+            // {
+            // System.out.println("HM - beer name = " + singleBeer.getName());
+            // System.out.println("HM - brewery name = " + singleBeer.getBrewery().getName());
+            // System.out.println("HM - style = " + singleBeer.getStyle().getName());
+            // }
+            // }
 
         } catch (Exception e)
         {
@@ -34,7 +34,7 @@ public class BeboreDAO extends BeboreBaseDAO
 
         return beerList;
     }
-    
+
     public BeerEntity getBeerById(int id)
     {
         BeerEntity singleBeer = null;
@@ -42,7 +42,8 @@ public class BeboreDAO extends BeboreBaseDAO
         try
         {
 
-            singleBeer = getEntityManager().createNamedQuery("getBeerInstance", BeerEntity.class).setParameter("inputId", id).getSingleResult();
+            singleBeer = getEntityManager().createNamedQuery("getBeerInstance", BeerEntity.class)
+                    .setParameter("inputId", id).getSingleResult();
 
         } catch (Exception e)
         {

@@ -11,10 +11,8 @@ import java.util.List;
 @Entity
 @Table(name = "beer")
 @NamedQueries(
-{ 
-    @NamedQuery(name = "getAllBeerCollection", query = "SELECT b FROM BeerEntity b"),
-    @NamedQuery(name = "getBeerInstance", query = "SELECT b FROM BeerEntity b where id = :inputId") 
-})
+{ @NamedQuery(name = "getAllBeerCollection", query = "SELECT b FROM BeerEntity b"),
+        @NamedQuery(name = "getBeerInstance", query = "SELECT b FROM BeerEntity b where id = :inputId") })
 
 public class BeerEntity implements Serializable
 {

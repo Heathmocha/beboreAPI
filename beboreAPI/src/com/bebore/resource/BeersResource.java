@@ -17,16 +17,16 @@ import com.bebore.response.BeerInfoRO;
 public class BeersResource
 {
 
-    @Inject 
-    BeboreManager testManager;
-    
+    @Inject
+    BeboreManager beboreManager;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBeerCollection()
     {
         System.out.println("HM - this is a print to get the full beer list - yay!");
 
-        List<BeerInfoRO> fullBeerList = testManager.getBeerList();
+        List<BeerInfoRO> fullBeerList = beboreManager.getBeerList();
 
         return Response.status(Response.Status.OK).entity(fullBeerList).build();
     }
@@ -38,7 +38,7 @@ public class BeersResource
     {
         System.out.println("HM - this is a print to get a beer by an id");
 
-        BeerInfoRO specificBeer = testManager.getSpecificBeer(beerId);
+        BeerInfoRO specificBeer = beboreManager.getSpecificBeer(beerId);
 
         return Response.status(Response.Status.OK).entity(specificBeer).build();
     }

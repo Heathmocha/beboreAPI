@@ -17,7 +17,7 @@ public class ReviewsResource
 {
 
     @Inject
-    BeboreManager testManager;
+    BeboreManager beboreManager;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
