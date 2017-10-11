@@ -1,4 +1,4 @@
-package com.test.response;
+package com.bebore.response;
 
 public class BeerInfoRO
 {

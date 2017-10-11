@@ -1,4 +1,4 @@
-package com.test.resource;
+package com.bebore.resource;
 
 import java.util.List;
 
@@ -10,15 +10,15 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.test.manager.TestManager;
-import com.test.response.BeerInfoRO;
+import com.bebore.manager.BeboreManager;
+import com.bebore.response.BeerInfoRO;
 
-@Path("beer")
-public class TestResource
+@Path("beers")
+public class BeersResource
 {
 
     @Inject 
-    TestManager testManager;
+    BeboreManager testManager;
     
     @GET
     @Produces(MediaType.APPLICATION_JSON)

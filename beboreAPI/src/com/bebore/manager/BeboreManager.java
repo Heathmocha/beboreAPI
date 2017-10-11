@@ -1,19 +1,19 @@
-package com.test.manager;
+package com.bebore.manager;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
-import com.test.dao.TestDAO;
-import com.test.entity.BeerEntity;
-import com.test.mapper.BeerListMapper;
-import com.test.response.BeerInfoRO;
+import com.bebore.dao.BeboreDAO;
+import com.bebore.entity.BeerEntity;
+import com.bebore.mapper.BeerListMapper;
+import com.bebore.response.BeerInfoRO;
 
-public class TestManager
+public class BeboreManager
 {
 
     @Inject
-    TestDAO testDAO;
+    BeboreDAO testDAO;
 
     @Inject
     BeerListMapper beerListMapper;
@@ -38,12 +38,12 @@ public class TestManager
 
     }
 
-    public TestDAO getTestDAO()
+    public BeboreDAO getTestDAO()
     {
         return testDAO;
     }
 
-    public void setTestDAO(TestDAO testDAO)
+    public void setTestDAO(BeboreDAO testDAO)
     {
         this.testDAO = testDAO;
     }

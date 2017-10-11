@@ -1,12 +1,12 @@
-package com.test.dao;
+package com.bebore.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-public class TestBaseDAO
+public class BeboreBaseDAO
 {
 
-    @PersistenceContext(unitName = "TestJPA")
+    @PersistenceContext(unitName = "BeboreJPA")
     protected EntityManager entityManager;
 
     /**
@@ -26,7 +26,7 @@ public class TestBaseDAO
         this.entityManager = entityManager;
     }
 
-    protected TestBaseDAO()
+    protected BeboreBaseDAO()
     {
         super();
     }

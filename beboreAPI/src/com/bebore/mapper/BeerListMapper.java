@@ -1,10 +1,10 @@
-package com.test.mapper;
+package com.bebore.mapper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.test.entity.BeerEntity;
-import com.test.response.BeerInfoRO;
+import com.bebore.entity.BeerEntity;
+import com.bebore.response.BeerInfoRO;
 
 public class BeerListMapper
 {

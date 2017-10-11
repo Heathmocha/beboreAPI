@@ -1,10 +1,10 @@
-package com.test.dao;
+package com.bebore.dao;
 
 import java.util.List;
 
-import com.test.entity.BeerEntity;
+import com.bebore.entity.BeerEntity;
 
-public class TestDAO extends TestBaseDAO
+public class BeboreDAO extends BeboreBaseDAO
 {
 
     public List<BeerEntity> getBeerList()
